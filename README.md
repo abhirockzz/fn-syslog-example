@@ -16,7 +16,6 @@ Papertrail creates a default destination to which logs can be exported. On the P
 
 ## get started
 
-- `git clone https://github.com/abhirockzz/fn-syslog`
 - start Fn server - `fn start`
 - Create an application with `syslog` endpoint info - `fn create app fn-syslog-app --syslog-url tcp://<your papertrail syslog endpoint>` e.g. `fn create app fn-syslog-app --syslog-url tcp://my.papertrail.com:4242`
 
@@ -31,7 +30,8 @@ Configure Docker
 
 Moving on....
 
-- `cd fn-syslog`
+- `git clone https://github.com/abhirockzz/fn-syslog-example`
+- `cd fn-syslog-example`
 - `fn -v deploy --app fn-syslog-app` (`-v` will activate verbose mode) - this will build the image and push it to the specified Docker repository
 
 > adding `--local` option will build & push docker images locally (and run it from there)
