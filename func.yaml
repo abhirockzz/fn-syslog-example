@@ -1,0 +1,6 @@
+name: fn-syslog-func
+version: 0.0.1
+runtime: java
+cmd: io.fnproject.example.HelloFunction::handleRequest
+format: http
+path: /test
