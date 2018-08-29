@@ -32,9 +32,7 @@ Moving on....
 
 - `git clone https://github.com/abhirockzz/fn-syslog-example`
 - `cd fn-syslog-example`
-- `fn -v deploy --app fn-syslog-app` (`-v` will activate verbose mode) - this will build the image and push it to the specified Docker repository
-
-> adding `--local` option will build & push docker images locally (and run it from there)
+- `fn -v deploy --app fn-syslog-app --local --no-bump` (`-v` will activate verbose mode)
 
 Your function should now be deployed. Check it
 
@@ -57,7 +55,10 @@ Test using Fn CLI with `fn call` command
 
 ### Invoke
 
-`fn call fn-syslog-app /test` - you can repeat this multiple times
+- `fn call fn-syslog-app /test`
+- `echo -n 'meeeeh' | fn call fn-syslog-app /test` 
+
+you can repeat this multiple times
 
 ### Check your Papertrail a/c
 
