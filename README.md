@@ -18,6 +18,12 @@ On the Papertrail [**Settings**](https://papertrailapp.com/account) choose **Log
 
 ![](settings.jpg)
 
+### For TCP, unselect TLS and select Plain Text
+
+As shown below ... Settings > Log Destination > xxxx > Settings
+
+![](unselect-TLS.png)
+
 ## Go..
 
 - start Fn server - `fn start`
