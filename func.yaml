@@ -1,6 +1,10 @@
+schema_version: 20180708
 name: fn-syslog-func
 version: 0.0.1
 runtime: java
 cmd: io.fnproject.example.HelloFunction::handleRequest
 format: http
-path: /test
+triggers:
+- name: fn-syslog-func
+  type: http
+  source: /fn-syslog-func
