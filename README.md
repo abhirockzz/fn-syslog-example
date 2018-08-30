@@ -21,22 +21,13 @@ On the Papertrail [**Settings**](https://papertrailapp.com/account) choose **Log
 ## Go..
 
 - start Fn server - `fn start`
+- Switch context - `fn use context default`
+- Set registry to a dummy name - `export FN_REGISTRY=fndemouser`
 - Create an application with `syslog` endpoint info - `fn create app fn-syslog-app --syslog-url tcp://<your papertrail syslog endpoint>` e.g. `fn create app fn-syslog-app --syslog-url tcp://my.papertrail.com:4242`
-
-> check out the documentation here
-
-### Configure Docker
-
-(optional - only if you want to push function images to external Docker registry)
-
-- `docker login` (use your Docker registry credentials)
-- `export FN_REGISTRY=<name of your docker repository>`
-
-> your function docker image name will end up being - `<docker repo name>/<function name in func.yaml>:<version in func.yaml>`
 
 ## Deploy
 
-- `git clone https://github.com/abhirockzz/fn-syslog-example`
+- Clone or download this repo
 - `cd fn-syslog-example`
 - `fn -v deploy --app fn-syslog-app --local --no-bump` (`-v` will activate verbose mode)
 
