@@ -8,9 +8,13 @@ Fn allows you to push the [function logs to a syslog endpoint](https://github.co
 
 Papertrail is a hosted log management service. You can sign up for a [free account](https://papertrailapp.com/signup?plan=free) for the purposes of this tutorial
 
+### create log destination
+
+Go to Settings (top right hand corner) and click on Log Destinations. Create a log destination.
+
 ### make a note of your *destination*
 
-Papertrail creates a default destination to which logs can be exported. On the Papertrail [**Settings**](https://papertrailapp.com/account) choose **Log Destinations** (from the options in the left) and copy the endpoint - you'll use this in subsequent steps
+On the Papertrail [**Settings**](https://papertrailapp.com/account) choose **Log Destinations** (from the options in the left) and copy the endpoint - you'll use this in subsequent steps
 
 ![](settings.jpg)
 
