@@ -20,7 +20,9 @@ On the Papertrail [**Settings**](https://papertrailapp.com/account) choose **Log
 
 ### For TCP, unselect TLS and select Plain Text
 
-As shown below ... Settings > Log Destination > xxxx > Settings
+As shown below ... Settings > Log Destination > my.papertrail.com:4242 > Settings
+
+For TCP > Unselect TLS and Select Plain Text
 
 ![](unselect-TLS.png)
 
