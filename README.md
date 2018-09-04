@@ -29,6 +29,16 @@ For TCP > Unselect TLS and Select Plain Text
 ## Go..
 
 - start Fn server - `fn start`
+	- Ensure you are running the latest fn cli (v0.4.153 or above) and fn server (v0.3.545 or above)
+	- If you have older version please update the CLI and the server
+	- To update the fn cli run the following command
+	```
+	curl -LSs https://raw.githubusercontent.com/fnproject/cli/master/install | sh
+	```
+	- To update the fn server run the following command
+	```
+	fn update sv
+	```
 - Switch context - `fn use context default`
 - Set registry to a dummy name - `export FN_REGISTRY=fndemouser`
 - Create an application with `syslog` endpoint info - `fn create app fn-syslog-app --syslog-url tcp://<your papertrail syslog endpoint>` e.g. `fn create app fn-syslog-app --syslog-url tcp://my.papertrail.com:4242`
