@@ -1,6 +1,6 @@
 # Exporting function logs to remote syslog service
 
-Fn allows you to push the [function logs to a syslog endpoint](https://github.com/fnproject/fn/blob/master/docs/operating/logging.md#remote-syslog-for-functions). This is an example of how to configure it and test it our using [Papertrail](https://papertrailapp.com)
+Fn allows you to push the [function logs to a syslog endpoint](https://github.com/fnproject/docs/blob/master/fn/operate/logging.md#remote-syslog-for-functions). This is an example of how to configure it and test it our using [Papertrail](https://papertrailapp.com)
 
 ## step 0 
 
