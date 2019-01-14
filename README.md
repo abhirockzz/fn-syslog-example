@@ -29,7 +29,6 @@ For TCP > Unselect TLS and Select Plain Text
 ## Create application
 
 - Get the latest version of Fn CLI - `curl -LSs https://raw.githubusercontent.com/fnproject/cli/master/install | sh`
-- Create the application - `fn create app `
 - Create an application with `syslog` endpoint info - `fn create app fn-syslog-app --annotation oracle.com/oci/subnetIds=<SUBNETS> --syslog-url tcp://<your papertrail syslog endpoint>` e.g. `fn create app fn-syslog-app --syslog-url tcp://my.papertrail.com:4242`
 - Switch to the context for Oracle Functions - `fn use context <context-name>`
 
