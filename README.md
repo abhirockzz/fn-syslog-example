@@ -26,28 +26,18 @@ For TCP > Unselect TLS and Select Plain Text
 
 ![](unselect-TLS.png)
 
-## Go..
+## Create application
 
-- start Fn server - `fn start`
-	- Ensure you are running the latest fn cli (v0.4.153 or above) and fn server (v0.3.545 or above)
-	- If you have older version please update the CLI and the server
-	- To update the fn cli run the following command
-	```
-	curl -LSs https://raw.githubusercontent.com/fnproject/cli/master/install | sh
-	```
-	- To update the fn server run the following command
-	```
-	fn update sv
-	```
-- Switch context - `fn use context default`
-- Set registry to a dummy name - `export FN_REGISTRY=fndemouser`
-- Create an application with `syslog` endpoint info - `fn create app fn-syslog-app --syslog-url tcp://<your papertrail syslog endpoint>` e.g. `fn create app fn-syslog-app --syslog-url tcp://my.papertrail.com:4242`
+- Get the latest version of Fn CLI - `curl -LSs https://raw.githubusercontent.com/fnproject/cli/master/install | sh`
+- Create the application - `fn create app `
+- Create an application with `syslog` endpoint info - `fn create app fn-syslog-app --annotation oracle.com/oci/subnetIds=<SUBNETS> --syslog-url tcp://<your papertrail syslog endpoint>` e.g. `fn create app fn-syslog-app --syslog-url tcp://my.papertrail.com:4242`
+- Switch to the context for Oracle Functions - `fn use context <context-name>`
 
 ## Deploy
 
 - Clone or download this repo
 - `cd fn-syslog-example`
-- `fn -v deploy --app fn-syslog-app --local --no-bump` (`-v` will activate verbose mode)
+- `fn -v deploy --app fn-syslog-app`
 
 Your function should now be deployed. Check it
 
@@ -56,17 +46,15 @@ Your function should now be deployed. Check it
 You will see something similar to this - notice the `syslog_url` configuration
 
 	{
+                .....
 	        "created_at": "2018-08-13T11:39:48.943Z",
 	        "id": "01CMSHBGTFNG8G00GZJ0000001",
 	        "name": "fn-syslog-app",
 	        "syslog_url": "tcp://my.papertrailapp.com:4242",
 	        "updated_at": "2018-08-13T11:39:48.943Z"
+                .....
 	}
 
-List the function using `fn list functions fn-syslog-app`
-
-		NAME            IMAGE
-		fn-syslog-func  fn-syslog-func:0.0.1
 
 ## Test
 
@@ -77,7 +65,7 @@ Test using Fn CLI with `fn invoke` command
 - `fn invoke fn-syslog-app fn-syslog-func`
 - `echo -n 'fun with fn!' | fn invoke fn-syslog-app fn-syslog-func` 
 
-you can repeat this multiple times
+You can repeat this multiple times
 
 ### Check your Papertrail a/c
 

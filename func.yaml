@@ -4,7 +4,3 @@ version: 0.0.1
 runtime: java
 cmd: io.fnproject.example.HelloFunction::handleRequest
 format: http-stream
-triggers:
-- name: fn-syslog-func
-  type: http
-  source: /fn-syslog-func
