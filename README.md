@@ -32,6 +32,12 @@ For TCP > Unselect TLS and Select Plain Text
 - Create an application with `syslog` endpoint info - `fn create app fn-syslog-app --annotation oracle.com/oci/subnetIds=<SUBNETS> --syslog-url tcp://<your papertrail syslog endpoint>` e.g. `fn create app fn-syslog-app --syslog-url tcp://my.papertrail.com:4242`
 - Switch to the context for Oracle Functions - `fn use context <context-name>`
 
+### If you already have an existing application...
+
+.. you can just configure that to use the papertrail `syslog` endpoint as well. It is as simple as
+
+`fn update app <app-name> --syslog-url tcp://<your papertrail syslog endpoint>` e.g.`fn update app my-existing-app --syslog-url tcp://my.papertrail.com:4242`
+
 ## Deploy
 
 - Clone or download this repo
