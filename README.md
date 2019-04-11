@@ -46,15 +46,15 @@ It is as simple as
 
 Open your application from the `Applications` page and click `Edit Application`
 
-![](console-1.PNG)
+![](console-1.png)
 
 Enter the `syslog` endpoint and click `Save`
 
-![](console-2.PNG)
+![](console-2.png)
 
 You should now see the updated value
 
-![](console-3.PNG)
+![](console-3.png)
 
 
 ## Deploy
