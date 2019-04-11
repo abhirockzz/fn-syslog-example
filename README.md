@@ -34,9 +34,28 @@ For TCP > Unselect TLS and Select Plain Text
 
 ### If you already have an existing application...
 
-.. you can just configure that to use the papertrail `syslog` endpoint as well. It is as simple as
+.. you can just configure that to use the papertrail `syslog` endpoint as well. 
+
+**Using the Fn CLI**
+
+It is as simple as
 
 `fn update app <app-name> --syslog-url tcp://<your papertrail syslog endpoint>` e.g.`fn update app my-existing-app --syslog-url tcp://my.papertrail.com:4242`
+
+**Using the Oracle Functions console**
+
+Open your application from the `Applications` page and click `Edit Application`
+
+![](console-1.PNG)
+
+Enter the `syslog` endpoint and click `Save`
+
+![](console-2.PNG)
+
+You should now see the updated value
+
+![](console-3.PNG)
+
 
 ## Deploy
 
